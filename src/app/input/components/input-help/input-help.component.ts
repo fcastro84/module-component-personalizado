@@ -1,12 +1,8 @@
 import {Component, Input, forwardRef, Self, EventEmitter, Output} from '@angular/core';
 import {ControlValueAccessor, NgControl,Validators} from "@angular/forms";
+import { Attributes } from '../../interfaces/input-help.interface';
 const tippy = require("node_modules/tippy.js/dist/tippy.cjs.js").default;
 
-interface Attributes{
-texto: string;
-id: string;
-label: string;
-}
 
 @Component({
   selector: 'app-input-help',

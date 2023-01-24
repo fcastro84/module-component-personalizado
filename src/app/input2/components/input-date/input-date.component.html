@@ -1,0 +1,11 @@
+<div class="example-container" [formGroup]="form">
+  <mat-form-field appearance="outline" floatLabel="always" class="ancho" [hideRequiredMarker]="true">
+    <mat-label>{{values.label}}*
+        <mat-icon matSuffix [id]="values.id"  (mouseover)="mostrar('#'+values.id, values.texto)">info</mat-icon>
+    </mat-label>
+    <input matInput [matDatepicker]="picker" [formControlName]="values.name" placeholder="Placeholder" >
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>

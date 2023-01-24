@@ -5,11 +5,11 @@ const tippy = require("node_modules/tippy.js/dist/tippy.cjs.js").default;
 
 
 @Component({
-  selector: 'app-input-help2',
-  templateUrl: './input-help2.component.html',
-  styleUrls: ['./input-help2.component.scss'],
+  selector: 'app-input-date',
+  templateUrl: './input-date.component.html',
+  styleUrls: ['./input-date.component.scss']
 })
-export class InputHelp2Component {
+export class InputDateComponent {
 
   @Input() form!: FormGroup;
   @Input() values!: Attributes2;

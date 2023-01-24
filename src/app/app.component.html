@@ -27,13 +27,15 @@
   <div class="login">
     <form [formGroup]="form2" (ngSubmit)="guardar2()">
       <h1>Example 2</h1>
-      <app-input-help2 [form]="form2" [values]="values2"></app-input-help2>
+      <app-input-help2 [form]="form2" [values]="values2[0]"></app-input-help2>
+      <app-input-date [form]="form2" [values]="values2[1]"></app-input-date>
+      <app-input-date-range [form]="form2" [values]="dateRange"></app-input-date-range>
       <button
         type="submit"
         mat-raised-button
         color="primary"
         class="ancho button" style="margin-top: 25px;"
-        [disabled]="!form.valid"
+        [disabled]="!form2.valid"
       >
         Acceder
       </button>

@@ -1,0 +1,13 @@
+<div class="example-container" [formGroup]="form">
+  <mat-form-field appearance="outline" floatLabel="always" [hideRequiredMarker]="true">
+    <mat-label>{{values.label}}* <mat-icon matSuffix [id]="values.id"  (mouseover)="mostrar('#'+values.id, values.texto)">info</mat-icon></mat-label>
+    <mat-date-range-input [rangePicker]="picker" [formGroupName]="values.group">
+      <input matStartDate placeholder="Start date" [formControlName]="values.name1">
+      <input matEndDate placeholder="End date" [formControlName]="values.name2">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+    <mat-error *ngIf="form.controls[values.group].get(values.name1)?.hasError('required')">Invalid start date</mat-error>
+    <mat-error *ngIf="form.controls[values.group].get(values.name2)?.hasError('required')">Invalid end date</mat-error>
+  </mat-form-field>
+</div>
