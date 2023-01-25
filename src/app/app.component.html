@@ -7,9 +7,13 @@
   <div class="login">
     <form [formGroup]="form" (ngSubmit)="guardar()">
       <h1>Example con ControlValueAccessor</h1>
+
       <app-input-help formControlName="usuario" [values]="values[0]" [form]="form"></app-input-help>
+
       <app-input-help-date formControlName="fechaP" [values]="values[1]" [form]="form"></app-input-help-date>
+
       <app-input-help-date-range [values]="dateRangeHelp" [form]="form"></app-input-help-date-range>
+
       <button
         type="submit"
         mat-raised-button
