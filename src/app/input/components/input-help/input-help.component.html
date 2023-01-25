@@ -1,15 +1,15 @@
-
-<mat-form-field appearance="outline"  [hideRequiredMarker]="true" floatLabel="always">
+<div [formGroup]="form">
+<mat-form-field appearance="outline"  [hideRequiredMarker]="true" floatLabel="always" class="ancho">
   <mat-label>{{values.label}}* <mat-icon matSuffix [id]="values.id"
     (mouseover)="mostrar('#'+values.id, values.texto)">
     info
   </mat-icon></mat-label>
   <mat-icon matPrefix>person</mat-icon>
-  <input matInput autocomplete="off" (input)="onChange( $event )" (blur)="onTouch(); blur.emit()" [ngStyle]="{'border-color': (controlDir.control?.touched && controlDir.control?.invalid) ? '#f44336 !important': ''}"/>
+  <input matInput autocomplete="off" [formControlName]="values.formName"  (input)="onChange( $event )" (blur)="onTouch(); blur.emit()"/>
 </mat-form-field>
-<div [class.errorText]="controlDir.control?.touched && controlDir.control?.invalid" *ngIf="controlDir.control?.touched && controlDir.control?.invalid">
+<!--div [class.errorText]="controlDir.control?.touched && controlDir.control?.invalid" *ngIf="controlDir.control?.touched && controlDir.control?.invalid">
   invalido
+</div-->
 </div>
-
 
 

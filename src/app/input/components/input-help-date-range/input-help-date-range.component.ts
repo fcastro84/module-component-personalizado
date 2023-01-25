@@ -1,16 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { AttributesDateRange } from '../../interfaces/input-date-range.interface';
+import {AttributesDateRangeHelp} from "../../interfaces/input-help-date-range.interface";
+import {AttributesDateRange} from "../../../input2/interfaces/input-date-range.interface";
 const tippy = require("node_modules/tippy.js/dist/tippy.cjs.js").default;
 
-
-
 @Component({
-  selector: 'app-input-date-range',
-  templateUrl: './input-date-range.component.html',
-  styleUrls: ['./input-date-range.component.scss']
+  selector: 'app-input-help-date-range',
+  templateUrl: './input-help-date-range.component.html',
+  styleUrls: ['./input-help-date-range.component.scss']
 })
-export class InputDateRangeComponent implements OnInit {
+export class InputHelpDateRangeComponent implements OnInit {
 
   @Input() form!: FormGroup;
   @Input() values!: AttributesDateRange;

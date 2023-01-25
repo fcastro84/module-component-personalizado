@@ -6,8 +6,10 @@
 <div class="body">
   <div class="login">
     <form [formGroup]="form" (ngSubmit)="guardar()">
-      <h1>Example</h1>
-      <app-input-help formControlName="usuario" [values]="values"></app-input-help>
+      <h1>Example con ControlValueAccessor</h1>
+      <app-input-help formControlName="usuario" [values]="values[0]" [form]="form"></app-input-help>
+      <app-input-help-date formControlName="fechaP" [values]="values[1]" [form]="form"></app-input-help-date>
+      <app-input-help-date-range [values]="dateRangeHelp" [form]="form"></app-input-help-date-range>
       <button
         type="submit"
         mat-raised-button
@@ -26,7 +28,7 @@
 <div class="body">
   <div class="login">
     <form [formGroup]="form2" (ngSubmit)="guardar2()">
-      <h1>Example 2</h1>
+      <h1>Example con Input y Ouput</h1>
       <app-input-help2 [form]="form2" [values]="values2[0]"></app-input-help2>
       <app-input-date [form]="form2" [values]="values2[1]"></app-input-date>
       <app-input-date-range [form]="form2" [values]="dateRange"></app-input-date-range>

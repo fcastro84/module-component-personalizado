@@ -1,4 +1,4 @@
-export interface AttributesDateRange{
+export interface AttributesDateRangeHelp{
   texto: string;
   id: string;
   name1: string;

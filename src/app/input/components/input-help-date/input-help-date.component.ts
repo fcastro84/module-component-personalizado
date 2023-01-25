@@ -3,15 +3,12 @@ import { ControlValueAccessor, NgControl, Validators, FormGroup } from '@angular
 import { Attributes } from '../../interfaces/input-help.interface';
 const tippy = require("node_modules/tippy.js/dist/tippy.cjs.js").default;
 
-
 @Component({
-  selector: 'app-input-help',
-  templateUrl: './input-help.component.html',
-  styleUrls: ['./input-help.component.scss'],
-
+  selector: 'app-input-help-date',
+  templateUrl: './input-help-date.component.html',
+  styleUrls: ['./input-help-date.component.scss']
 })
-export class InputHelpComponent implements ControlValueAccessor {
-
+export class InputHelpDateComponent implements ControlValueAccessor {
   @Input() values!: Attributes;
   @Input() form!: FormGroup;
   @Output() blur: EventEmitter<void> = new EventEmitter<void>();
@@ -27,13 +24,13 @@ export class InputHelpComponent implements ControlValueAccessor {
   ngOnInit(): void {
     const control = this.controlDir.control;
     let validators = control?.validator
-                ? [control.validator, Validators.required]
-                : Validators.required;
+      ? [control.validator, Validators.required]
+      : Validators.required;
     control?.setValidators(validators);
   }
   writeValue(value: string): void {
-      //this.value = value;
-      value && this.controlDir?.control?.setValue(value, { emitEvent: false });
+    //this.value = value;
+    value && this.controlDir?.control?.setValue(value, { emitEvent: false });
   }
 
   onChange( event: Event ): void {
