@@ -9,8 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { AppComponent } from './app.component';
-import { FormFieldLabelExampleComponent } from './components/form-field-label-example/form-field-label-example.component';
-import { LoginComponent } from './components/login/login.component';
 import {InputModule} from "./input/input.module";
 import {Input2Module} from "./input2/input2.module";
 
@@ -18,8 +16,6 @@ import {Input2Module} from "./input2/input2.module";
 @NgModule({
   declarations: [
     AppComponent,
-    FormFieldLabelExampleComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
