@@ -6,7 +6,7 @@
 <div class="body">
   <div class="login">
     <form [formGroup]="form" (ngSubmit)="guardar()">
-      <h1>Example con ControlValueAccessor</h1>
+      <h1>Example with ControlValueAccessor</h1>
 
       <app-input-help formControlName="usuario" [values]="values[0]" [form]="form"></app-input-help>
 
@@ -32,7 +32,7 @@
 <div class="body">
   <div class="login">
     <form [formGroup]="form2" (ngSubmit)="guardar2()">
-      <h1>Example con Input y Ouput</h1>
+      <h1>Example with Input and Ouput</h1>
       <app-input-help2 [form]="form2" [values]="values2[0]"></app-input-help2>
       <app-input-date [form]="form2" [values]="values2[1]"></app-input-date>
       <app-input-date-range [form]="form2" [values]="dateRange"></app-input-date-range>

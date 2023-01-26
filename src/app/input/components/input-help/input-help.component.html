@@ -4,12 +4,9 @@
     (mouseover)="mostrar('#'+values.id, values.texto)">
     info
   </mat-icon></mat-label>
-  <mat-icon matPrefix>person</mat-icon>
-  <input matInput autocomplete="off" [formControlName]="values.formName"  (input)="onChange( $event )" (blur)="onTouch(); blur.emit()"/>
+  <mat-icon matPrefix>{{values.icon}}</mat-icon>
+  <input matInput autocomplete="off" [placeholder]="values.placeholder || ''" [formControlName]="values.formName"  (input)="onChange( $event )" (blur)="onTouch(); blur.emit()"/>
 </mat-form-field>
-<!--div [class.errorText]="controlDir.control?.touched && controlDir.control?.invalid" *ngIf="controlDir.control?.touched && controlDir.control?.invalid">
-  invalido
-</div-->
 </div>
 
 

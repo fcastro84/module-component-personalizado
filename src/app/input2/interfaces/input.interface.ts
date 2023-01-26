@@ -3,4 +3,5 @@ export interface Attributes2{
   id: string;
   name: string;
   label: string;
+  placeholder?: string;
   }

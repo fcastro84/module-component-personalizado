@@ -22,13 +22,17 @@ export class AppComponent implements OnInit {
     texto: 'esto es un texto de ejemplo por Api',
     id: 'usuario',
     label: 'Usuario Api',
-    formName: 'usuario'
+    formName: 'usuario',
+    placeholder: 'Usuario',
+    icon: 'person'
+
   },
     {
       texto: 'Fecha de planificación esto es un texto de ejemplo por Api',
       id: 'fechaP',
       label: 'Fecha Api',
-      formName: 'fechaP'
+      formName: 'fechaP',
+      placeholder: 'Fecha ejemplo'
     },
   ]
 
@@ -36,13 +40,15 @@ export class AppComponent implements OnInit {
     texto: 'esto es u texto de ejemplo',
     id: 'usuario2',
     name: 'usuario2',
-    label: 'Usuario'
+    label: 'Usuario',
+    placeholder: 'Usuario'
   },
   {
     texto: 'Fecha de planificación',
     id: 'datep',
     name: 'fecha',
-    label: 'Fecha'
+    label: 'Fecha',
+    placeholder: 'Fecha ejemplo'
   }
 ]
 

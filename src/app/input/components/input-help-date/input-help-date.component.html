@@ -3,7 +3,7 @@
     <mat-label>{{values.label}}*
       <mat-icon matSuffix [id]="values.id"  (mouseover)="mostrar('#'+values.id, values.texto)">info</mat-icon>
     </mat-label>
-    <input matInput [matDatepicker]="picker" [formControlName]="values.formName" placeholder="Placeholder" (input)="onChange( $event )" (blur)="onTouch(); blur.emit()" >
+    <input matInput [matDatepicker]="picker" [formControlName]="values.formName" [placeholder]="values.placeholder || ''" (input)="onChange( $event )" (blur)="onTouch(); blur.emit()" >
 
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
